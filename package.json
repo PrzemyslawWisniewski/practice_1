@@ -11,5 +11,5 @@
     "sass": "node-sass --output-style compressed --watch scss/style.scss css/style.css"
   },
   "author": "PW",
-  "license": "ISC"
+  "license": "MIT"
 }

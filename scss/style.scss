@@ -1,5 +1,16 @@
 @import 'reset';
 
 body {
-  background-color: cornsilk
+  font-family: 'Arial', sans-serif;
+  background-color: cornsilk;
+}
+
+.container {
+  padding: 50px;
+}
+
+h3 {
+  font-size: 1.17rem;
+  font-weight: bold;
+  padding: 10px 0;
 }

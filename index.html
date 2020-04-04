@@ -1,13 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Practice project - Vanilla JS</title>
-  <link rel="stylesheet" type="text/css" href="css/style.css" >
-  <script type="text/javascript" src="javascript.js"></script>
-</head>
-<body>
-  <div class="container">Body body</div>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practice project - Vanilla JS</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script type="text/javascript" src="javascript.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h3>User Cards</h3>
+
+      <!-- <user-card name="Johsep Stalin Chan" avatar="assets/img/1.jpg"> -->
+      <user-card name="Some Guy" avatar="https://randomuser.me/api/portraits/men/2.jpg">
+        <div slot="email">someGuy@gmail.com</div>
+        <div slot="phone">555-555-555</div>
+      </user-card>
+      <user-card name="Some Girl" avatar="https://randomuser.me/api/portraits/women/2.jpg">
+        <div slot="email">someGirl@gmail.com</div>
+        <div slot="phone">777-777-777</div>
+      </user-card>
+    </div>
+
+    <script src="components/user-card/user-card.js"></script>
+  </body>
 </html>
