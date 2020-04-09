@@ -117,6 +117,24 @@
   console.log('mul0', mul());
   console.log('mul1', mul(3, 0.5));
 
+  // closures
+  let shi = function () {
+    let i = 0;
+    return {
+      setI(k) {
+        i = k;
+      },
+      getI() {
+        return i;
+      },
+    };
+  };
+  let x = shi();
+
+  // console.log('shi ', shi);
+  // console.log('x.setI() ', x.setI(2));
+  // console.log('x.getI() ', x.getI());
+
   /*
   *******************************
   // // Make this pure
@@ -204,6 +222,21 @@
 
   const resu3 = wow.apply(student);
   console.log('resu3 ', resu3);
+
+  const profile = {
+    firstName: '',
+    lastName: '',
+    setName: function (name) {
+      let splitName = (n) => {
+        let nameArr = n.split(' ');
+        this.firstName = nameArr[0];
+        this.lastName = nameArr[1];
+      };
+      splitName(name);
+    },
+  };
+  profile.setName('Adam Smith');
+  console.log('profile firstName ', profile.firstName, 'SECOND', profile.lastName);
 })();
 
 // const one = Rx.Observable(1,2,3,4,5);
@@ -219,3 +252,5 @@
 // function ohMyHeavens() {
 //   console.log('%c Oh my heavens! ', 'background: #222; color: #bada55');
 // }
+
+// https://app.codility.com/demo/take-sample-test/
