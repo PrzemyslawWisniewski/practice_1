@@ -92,7 +92,7 @@ const arr2 = [-7100, -200, 0, 100, -300, 200, 1, -700, 500];
 
 function solution1(A) {
   var ans = 0;
-  for (let i = 2; i < A.length; i++) {
+  for (let i = 0; i < A.length; i++) {
     if (ans > A[i]) {
       ans = A[i];
     }
