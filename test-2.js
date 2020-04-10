@@ -69,7 +69,11 @@ CustomError
 */
 
 // solution(U, 3);
-console.log(solution(U, 1));
+
+const iterator = [1, , 3, 4, 5];
+for (let i = 1; i <= iterator.length; i++) {
+  console.log(`iterator[i]: ${iterator[i - 1]} `, solution(U, i));
+}
 
 /*
 /////////////////////
