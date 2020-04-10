@@ -1,8 +1,4 @@
 'use strict';
-// const { Observable } = require('rxjs/Observable');
-// require('rxjs/add/observable/fromEvent');
-// require('rxjs/add/operator/map');
-// require('rxjs/add/observable/merge');
 
 (function () {
   const array1 = [1, 2, 3, 4, 5];
