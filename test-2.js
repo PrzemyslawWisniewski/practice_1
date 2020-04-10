@@ -87,7 +87,7 @@ First
 //   return ans;
 // }
 
-const arr1 = [-2, 2, -1, 1];
+const arr1 = [2, -2, 1, -1];
 const arr2 = [-7100, -200, 0, 100, -300, 200, 1, -700, 500];
 
 function solution1(A) {
