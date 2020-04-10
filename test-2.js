@@ -71,8 +71,8 @@ CustomError
 // solution(U, 3);
 
 const iterator = [1, , 3, 4, 5];
-for (let i = 1; i <= iterator.length; i++) {
-  console.log(`iterator[i]: ${iterator[i - 1]} `, solution(U, i));
+for (let i = 0; i < iterator.length; i++) {
+  console.log(`iterator[i]: ${iterator[i]} `, solution(U, iterator[i]));
 }
 
 /*
@@ -92,7 +92,11 @@ First
 // }
 
 const arr1 = [2, -2, 1, -1];
-const arr2 = [-7100, -200, 0, 100, -300, 200, 1, -700, 500];
+
+function range(size, startAt) {
+  return [...Array(size).keys()].map((i) => i + startAt);
+}
+const arr2 = range(2001, -1000);
 
 function solution1(A) {
   var ans = 0;
@@ -103,4 +107,4 @@ function solution1(A) {
   }
   return ans;
 }
-console.log('Solve the arr', solution1(arr1));
+console.log('Solve the arr', solution1(arr2));
