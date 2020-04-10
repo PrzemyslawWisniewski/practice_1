@@ -81,6 +81,7 @@ First
 /////////////////////
 */
 
+// Given problem - for arr1 the function solution shoud return: -2 for arr2 of range [-1000 ..1000] should return: -1000
 // function solution(A) {
 //   var ans = 0;
 //   for (i = 1; i < A.length; i++) {
@@ -98,7 +99,8 @@ function range(size, startAt) {
 }
 const arr2 = range(2001, -1000);
 
-function solution1(A) {
+// solution where only one line of code could be modified.
+function solution_1(A) {
   var ans = 0;
   for (let i = 0; i < A.length; i++) {
     if (ans > A[i]) {
@@ -107,4 +109,15 @@ function solution1(A) {
   }
   return ans;
 }
-console.log('Solve the arr', solution1(arr2));
+console.log('Solve the arr', solution_1(arr2));
+
+// better way to deal with it
+function solution_2(A) {
+  const minVal = A.reduce((acc, cur) => Math.min(acc, cur), []);
+  return minVal;
+}
+console.log('better solution ', solution_2(arr2));
+// solution_2(arr1);
+
+// console.log(`acc: ${acc}, cur: ${cur}, i: ${i}, arr: ${arr}`);
+// return cur < acc ? (minVal = cur) : null;
