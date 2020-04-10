@@ -48,7 +48,7 @@ function solution(U, N) {
 
             console.log('getTopBrandsForGender resolve ', brands.slice(0, N));
 
-            brands.length >= N ? resolve(brands.slice(0, N)) : reject(CustomError(customMessage));
+            brands.length >= N ? resolve(brands.slice(0, N)) : reject(new CustomError(customMessage));
           });
     });
   });
@@ -69,4 +69,34 @@ CustomError
 */
 
 // solution(U, 3);
-console.log(solution(U, 5));
+console.log(solution(U, 1));
+
+/*
+/////////////////////
+First 
+/////////////////////
+*/
+
+// function solution(A) {
+//   var ans = 0;
+//   for (i = 1; i < A.length; i++) {
+//       if (ans > A[i]) {
+//           ans = A[i];
+//       }
+//   }
+//   return ans;
+// }
+
+const arr1 = [-2, 2, -1, 1];
+const arr2 = [-7100, -200, 0, 100, -300, 200, 1, -700, 500];
+
+function solution1(A) {
+  var ans = 0;
+  for (let i = 2; i < A.length; i++) {
+    if (ans > A[i]) {
+      ans = A[i];
+    }
+  }
+  return ans;
+}
+console.log('Solve the arr', solution1(arr1));
