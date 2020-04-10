@@ -115,11 +115,10 @@ function solution_1(A) {
   }
   return ans;
 }
-console.log('First test question min value of arr2 = [-1000 ..1000]:  ', solution_1(arr2));
+console.log('First test question min value of arr2 = [-1000 ..1000]: ', solution_1(arr2));
 
 // better way to deal with it
 function solution_2(A) {
-  const minVal = A.reduce((acc, cur) => Math.min(acc, cur), []);
-  return minVal;
+  return A.reduce((acc, cur) => Math.min(acc, cur), []);
 }
 console.log('Better solution for First test question: ', solution_2(arr2));
