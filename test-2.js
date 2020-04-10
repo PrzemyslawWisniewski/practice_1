@@ -1,5 +1,11 @@
 'use strict';
 
+/*
+/////////////////////
+Second test question
+/////////////////////
+*/
+
 const customMessage = 'Not enough data';
 
 const U = { id: 123132, gender: 'FEMALE' };
@@ -36,17 +42,17 @@ function solution(U, N) {
     const clearedList = (arrays) => Array.from(new Set(arrays));
 
     getLikedBrands(U.id).then((liked) => {
-      console.log(
-        'getLikedBrands resolve ',
-        liked.slice(0, N).map((i) => i.name)
-      );
+      // console.log(
+      //   'getLikedBrands resolve ',
+      //   liked.slice(0, N).map((i) => i.name)
+      // );
 
       liked.length >= N
         ? resolve(liked.slice(0, N).map((i) => i.name))
         : getTopBrandsForGender(U.gender).then((top) => {
             const brands = clearedList([...liked, ...top].map((i) => i.name));
 
-            console.log('getTopBrandsForGender resolve ', brands.slice(0, N));
+            // console.log('getTopBrandsForGender resolve ', brands.slice(0, N));
 
             brands.length >= N ? resolve(brands.slice(0, N)) : reject(new CustomError(customMessage));
           });
@@ -72,12 +78,12 @@ CustomError
 
 const iterator = [1, , 3, 4, 5];
 for (let i = 0; i < iterator.length; i++) {
-  console.log(`iterator[i]: ${iterator[i]} `, solution(U, iterator[i]));
+  console.log(`Second test question promises for N: ${iterator[i]} `, solution(U, iterator[i]));
 }
 
 /*
 /////////////////////
-First 
+First test question
 /////////////////////
 */
 
@@ -109,15 +115,11 @@ function solution_1(A) {
   }
   return ans;
 }
-console.log('Solve the arr', solution_1(arr2));
+console.log('First test question min value of arr2 = [-1000 ..1000]:  ', solution_1(arr2));
 
 // better way to deal with it
 function solution_2(A) {
   const minVal = A.reduce((acc, cur) => Math.min(acc, cur), []);
   return minVal;
 }
-console.log('better solution ', solution_2(arr2));
-// solution_2(arr1);
-
-// console.log(`acc: ${acc}, cur: ${cur}, i: ${i}, arr: ${arr}`);
-// return cur < acc ? (minVal = cur) : null;
+console.log('Better solution for First test question: ', solution_2(arr2));
