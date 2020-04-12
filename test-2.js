@@ -42,10 +42,7 @@ function solution(U, N) {
     const clearedList = (arrays) => Array.from(new Set(arrays));
 
     getLikedBrands(U.id).then((liked) => {
-      // console.log(
-      //   'getLikedBrands resolve ',
-      //   liked.slice(0, N).map((i) => i.name)
-      // );
+      // console.log('getLikedBrands resolve ',liked.slice(0, N).map((i) => i.name));
 
       liked.length >= N
         ? resolve(liked.slice(0, N).map((i) => i.name))

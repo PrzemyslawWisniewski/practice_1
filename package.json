@@ -8,7 +8,8 @@
   },
   "devDependencies": {},
   "scripts": {
-    "sass": "node-sass --output-style compressed --watch scss/style.scss css/style.css"
+    "sass": "node-sass --output-style compressed --watch scss/style.scss css/style.css",
+    "build-sass": "node-sass --output-style compressed scss/style.scss css/style.css"
   },
   "author": "PW",
   "license": "MIT"
